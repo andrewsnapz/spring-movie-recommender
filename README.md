@@ -15,3 +15,9 @@ Lesson 3 - Beans
 - Adding an @Autowire annotation will tell spring that it's a dependency
 - Adding @ComponentScan tells spring the location of the beans and where to find them and auto wire the depdencies.
 - @SpringBootApplication annotation is composed of @Configuration, @EnableAutoConfiguration, and @ComponentScan
+
+Lesson 4 - @Primary
+ -  When spring comes across two beans of the same type, it throws an error
+ - One way to resolve this is by making one of the beans the Primary
+ - This happens because spring doesn't know which bean to inject
+ - Adding @Primary is called autowiring by type
