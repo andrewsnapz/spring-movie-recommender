@@ -25,3 +25,8 @@ Lesson 4 - @Primary
 Lesson 5 - Autowiring by Name
 - Another way to let spring know which bean to use in the case of conflicting beans is to use the bean with the same name when using it in a class.
 - spring takes priority by type first, the second priority is by name
+
+Lesson 6 - @Qualifier / @Component([NAME])
+- Another way to give priority to one bean over the other bean (if two of the same types are found).
+- Can use either @Qualifier or @Component([name])
+- @Qualifier / @Component([name]) > @Primary > Autowiring by Name
