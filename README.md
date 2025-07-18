@@ -36,3 +36,13 @@ Lesson 7 - Constructor and Setter Injection
 - Constructor Injection is autowiring a dependency using a constructor.
 - Setter Injection is wiring a dependency using a setter method
 - Using @Autowired directly on a field is called field injection (the most unsafe, as spring sets private fields of the objects.)
+
+Lesson 8 - Singleton vs Prototype scope
+- Spring container manages beans (application context and bean factory)
+- Bean scope refers to the lifecycle and visibility of beans.
+- 6 types of beans (singleton, prototype, request, session, application, websocket)
+- The last four scopes are only available in web applications
+- Singleton beans are created once and cached. Any call to this bean returns the same reference. Best used to handle stateless cases.
+- Prototype beans are created one per request.
+- Singleton beans are created before we ask for it, while prototypical bean are created on demand.
+- Spring vs Gang of Four singleton (Spring Singleton: One bean per application context, Gang of Four: One bean per JVM)
