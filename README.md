@@ -30,3 +30,9 @@ Lesson 6 - @Qualifier / @Component([NAME])
 - Another way to give priority to one bean over the other bean (if two of the same types are found).
 - Can use either @Qualifier or @Component([name])
 - @Qualifier / @Component([name]) > @Primary > Autowiring by Name
+
+Lesson 7 - Constructor and Setter Injection
+- Another way for beans to be wired in.
+- Constructor Injection is autowiring a dependency using a constructor.
+- Setter Injection is wiring a dependency using a setter method
+- Using @Autowired directly on a field is called field injection (the most unsafe, as spring sets private fields of the objects.)
