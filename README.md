@@ -46,3 +46,8 @@ Lesson 8 - Singleton vs Prototype scope
 - Prototype beans are created one per request.
 - Singleton beans are created before we ask for it, while prototypical bean are created on demand.
 - Spring vs Gang of Four singleton (Spring Singleton: One bean per application context, Gang of Four: One bean per JVM)
+
+Lesson 9 - Mixing bean scopes
+- When a prototype bean is injected into a singleton bean, it loses its prototype behavior and acts as like a singleton
+- Singleton beans get initiated when the application context first runs. In this case a singleton bean (the filter) see's it has a dependency on a prototype bean. It then converts the prototype bean into a singleton bean.
+- Need to use the @Scope(value=ConfigurableBeanFactory.SCOPE_PROTOTYPE, proxyMode=ScopedProxyMode.TARGET_CLASS) annotation. This will tell spring to inject a proxy at a prototype bean on initiation. 
