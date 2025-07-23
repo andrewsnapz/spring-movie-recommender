@@ -54,3 +54,7 @@ Lesson 9 - Mixing bean scopes
 
 Lesson 10 - Component Scan
 - Use the @ComponentScan to scan for specific packages that your beans need
+
+Lesson 11 - Bean Lifecycle Methods
+- @PostConstruct is the annotation that tells spring to invoke a function after the bean's dependencies are wired (such as connecting to a database). The function will always return void.
+- @PreDestroy is the annotation that tells spring to invoke a function after removing a bean from the container. 
